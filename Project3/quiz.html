@@ -1,0 +1,45 @@
+<!-- 
+    Nivedita Rao
+    I399 - P3 Quiz Interface
+ -->
+<!-- Citations:
+    Quiz Questions: https://www.usefultrivia.com/geography_trivia/index.html
+    Reset function inspiration: https://stackoverflow.com/questions/40371972/resetting-a-quiz-with-reset-button
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <script src="https://kit.fontawesome.com/bf37eaf948.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/quiz.css">
+</head>
+
+<body>
+
+    <article id="quiz">
+        <div id="count"></div>
+        <div class="question"></div>
+        <div class="choices">
+
+        </div>
+        <button type="button">NEXT</button>
+        <div id="progress"></div>
+        <div class="scoreScreen">
+        <div id="score" class="hide">
+            <p></p>
+            <!-- <input type='reset'> -->
+        <button id='fullReset'>Play Again!</button>
+        </div>
+    </div>
+    </article>
+
+    <script src="js/quiz.js"></script>
+</body>
+
+</html>

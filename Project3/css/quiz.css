@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@400;700&display=swap');
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    /* background: #990000; */
+    background: url("/Project3/bg1.jpg");
+    /* font-family: 'Cormorant', serif; */
+    /* font-family: 'Press Start 2P', cursive; */
+    font-family: 'Permanent Marker', cursive;
+}
+
+#quiz {
+    position: relative;
+    max-width: 600px;
+    height: 420px;
+    margin: 100px auto 0;
+    background: rgba(0, 0, 0, 0.925);
+    border:5px solid rgb(255, 217, 0);
+    border-radius: 25px;
+    color: white;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.45);
+    padding: 3.0em;
+}
+
+.question {
+    font-size: 36px;
+    text-align: center;
+}
+
+.choices {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* set column sizes here */
+    grid-template-rows: auto auto; /* we want two rows */
+    grid-gap: 10px; /* how far between cells? */
+    grid-auto-flow: column; /* fill in by column, not row */
+    height: 150px;
+
+    /* max-width: 300px; */
+    font-size: 24px;
+    margin-top: 2.0em;
+}
+
+.choices p {
+    padding: 0.25em;
+    font-family: 'Roboto Mono', monospace;
+}
+/* ---------------------- */
+.choicesButton label {
+    padding: 10px;
+    border: 1px solid #CCC;
+    cursor: pointer;
+    z-index: 90;
+    border-radius: 10px;
+}
+
+.choicesButton label:hover {
+    background: rgb(50, 158, 158);
+}
+
+.choicesButton {
+    /* display: flex; */
+    list-style-type: none;
+    margin: 25px 0 0 0;
+    padding: 0;
+}
+
+.choicesButton li {
+    float: left;
+    margin: 0 5px 0 0;
+    width: 100px;
+    height: 40px;
+    position: relative;
+}
+
+.choicesButton label, .choicesButton input {
+    display: block;
+    position: absolute;
+    /* top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; */
+ } 
+
+.choicesButton input[type="radio"] {
+    opacity: 0.01;
+    z-index: 100;
+}
+
+.choicesButton input[type="radio"]:checked+label {
+    background: rgb(190, 74, 93);
+}
+/* -------------------------- */
+button {
+    /* font-family:'Roboto Mono', monospace; */
+    font-family: 'Permanent Marker', cursive;
+    font-size: 18px;
+    padding: 0.5em 1.0em;
+    display: block;
+    margin: 2.0em auto;
+    border-radius: 12px;
+    background: white;
+}
+
+button:hover, button:active {
+    background: rgba(255, 217, 0, 0.815);
+}
+
+#progress {
+    position: absolute;
+    bottom: 3.0em;
+    right: 4.0em;
+    margin-top: .0em;
+    display: flex;
+    flex-flow: row-reverse;
+}
+
+.marker {
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: white;
+    margin: 0.25em;
+}
+
+.correct {
+    /* background-color: rgb(10, 150, 10); */
+    background-color: rgb(50, 158, 158);
+
+}
+
+.incorrect {
+    /* background-color: rgb(190, 0, 0); */
+    background-color: rgb(190, 74, 93);
+}
+
+#score {
+    /* background-color:rgba(255, 174, 0, 0.815); */
+    width: 100%;
+    height: 500px;
+    position: relative;
+    top: 70px;
+    left: 0;
+    font-size: 60px;
+    font-family: 'Roboto Mono', monospace;
+    /* display: flex; */
+    justify-content: center;
+    /* align-items: center;
+    text-align: center; */
+}
+
+.reveal {
+    display: block !important;
+}
+
+.hide {
+    display: none !important;
+}
+/* #count{
+    position: relative;
+    left: 550px;
+    height: 50px;
+    font-size: 30px;
+    background-color: goldenrod;
+    border:3px solid white;
+    border-radius: 50px;
+    width: 50px;
+    text-align: center;
+} */
+.scoreScreen{
+    position: relative;
+    bottom: 240px;
+    /* left: 200px; */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.scoreScreen p{
+    text-align: center;
+}

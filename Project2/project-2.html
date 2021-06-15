@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- 
+    Nivedita Rao 
+    I399: Project 2 
+  -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project 2: Interactive</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet"> 
+  <script src="https://kit.fontawesome.com/bf37eaf948.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Recreation of interactive article: https://projects.propublica.org/drug-labels/ -->
+
+    <h1>How Much Acetaminophen Are You Taking?</h1>
+
+    <p class="byline">By Al Shaw, Lena Groeger and T. Christian Miller, ProPublica, September 20, 2013</p>
+    
+    <p>Many common over-the-counter drugs contain acetaminophen. Taking more than one at the same time increases your chance of “double-dipping” -- accidentally overdosing. Use this tool to find out which of the drugs in your medicine cabinet contains acetaminophen -- and how much. This is not meant to be medical advice. Toxic levels vary by individual. Call your doctor if you think you’ve overdosed, even if you don’t show medical symptoms.
+    Combining the daily maximum dose of common drugs can lead to an overdose.</p>
+
+    <h2>Combining the daily maximum dose of common drugs can lead to an overdose.</h2>
+
+    <div id="interactive">
+      <div id="drugs">
+
+      </div>
+      <div id="progressbar">
+        <div class="meter">
+          <span style="height: 0%"></span>
+        </div>
+        <p class="label">0mg</p>
+      </div>
+      <div id="message">
+        <p class="total"></p><br>
+        <p><i class="far fa-hand-point-left fa-md"></i> Click on a drug to see its daily limit of acetaminophen</p>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/json" src="js/drugs.json"></script>
+  <script src="js/project-2.js"></script>
+</body>
+</html>

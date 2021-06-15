@@ -1,0 +1,226 @@
+/* 
+Nivedita Rao 
+Project 2
+*/
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+  General
+*/
+.container {
+  max-width: 1020px;
+  margin: 30px auto 150px;
+  padding: 15px;
+}
+
+/*
+  Typography
+*/
+
+h1, h2, p, figcaption {
+  font-family: 'Catamaran', sans-serif;
+  line-height: 1.3em;
+}
+
+h1 {
+  margin: 0 0 0.25em;
+}
+
+h2 {
+  margin: 1.5em 0 1.0em;
+  font-size: 20px;
+}
+
+.container > p {
+  max-width: 85%;
+}
+
+figcaption {
+  font-size: small;
+}
+
+.byline {
+  font-size: small;
+  margin: 0 0 2.0em;
+}
+
+#message p {
+  font-size: small;
+}
+
+
+/* 
+PART TWO
+A: Use Grid to create the three column layout: 564px / 225px / 150px
+  - if you want to try to make it more responsive, try this:
+  - https://css-tricks.com/intrinsically-responsive-css-grid-with-minmax-and-min/
+  - https://dev.to/evanminto/intrinsically-responsive-css-grid-with-minmax-and-min-1n55
+  - if you've not had I360, then just try to make three columns of the right proportions
+B: The drugs are 100px x 100px - you may need to force a height of 448px
+*/
+
+/*
+  Interactive
+*/
+
+#interactive {
+display: flex;
+}
+
+/* drugs containing acetametaphin */
+#drugs {
+  max-height: 448px;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(5, 100px);
+  grid-auto-rows: 100px;
+}
+
+/*
+  Make sure you understand the CSS for the first column (drug images):
+  - hover effect and label for each drug image
+  - an effect that remains when a drug is clicked (to show it's been selected)
+  - CSS transitions to help with the interface interactions
+ */
+
+figure { 
+  margin: 0;
+  border: 1px solid lightgray;
+}
+
+figcaption {
+  background-color: rgb(250, 250, 250);
+  padding: 3px 0;
+  text-align: center;
+  position: relative;
+  left: 0;
+  top: -75px;
+} 
+
+/* https://thebrandsmen.com/css-image-hover-effects/ */
+img {
+  opacity: 0.35;
+  transition: 0.6s ease;
+}
+img:hover{
+  filter: grayscale(0%);
+  filter: gray;
+  -webkit-filter: grayscale(0%);
+  filter: none;
+  transition: 1s ease;
+}
+/* My css */
+img:active{
+  filter: grayscale(0%);
+  filter: gray;
+  -webkit-filter: grayscale(0%);
+  filter: none;
+  transition: 1s ease;
+}
+
+ 
+figure:hover {
+  cursor: pointer;
+}
+
+figure:hover img {
+  opacity: 1;
+  transition: 0.6s ease;
+}
+
+figure:hover figcaption {
+  opacity: 0;
+  transition: 0.6s ease;
+}
+
+/* when figure is selected */
+figure.selected img {
+  opacity: 1;
+  box-shadow: 1px 1px 3px black;
+}
+
+figure.selected figcaption {
+  opacity: 0;
+}
+
+/* how close to lethal dose bar */
+#progressbar {
+  
+  display: flex;
+  align-items: flex-end;
+  width: 250px;
+  /* flex-flow: wrap; */
+}
+
+.meter {
+  flex-shrink: 0;
+  min-width: 16px;
+  height: 100%;
+  margin-left: 30px;
+  border: 1px solid lightslategray;
+  border-radius: 4px;
+  position: relative;
+}
+
+.meter > span {
+  background-color: darkred;
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.6s ease;
+}
+
+.label {
+  margin: 0;
+  padding-left: 1.0em;
+  position: relative;
+  top: 10px;
+  left: 0;
+  transition: 0.6s ease;
+}
+
+.label::before {
+  content: '\2014';
+  font-family: Georgia, serif;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  left: -15px;
+}
+
+/* total dose and warning message */
+#message {
+  width: 400px; 
+  padding-top: 2.0em;
+}
+
+#message p {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+#message span {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+#message p:nth-of-type(1) {
+  padding-bottom: 0.5em;
+  font-size: 30px;
+}
+
+#message span:nth-of-type(2) {
+  font-size: 36px;
+  padding-bottom: 0.25em;
+}

@@ -1,0 +1,47 @@
+[
+    {
+        "question": "What is the collective noun for a group of unicorns?",
+        "answers": {
+          "a": "A blessing",
+          "b": "A union",
+          "c": "A cloud"
+        },
+        "correct": "a"
+      },
+      {
+        "question": "What is the most common color of toilet paper in France?",
+        "answers": {
+          "a": "White",
+          "b": "Blue",
+          "c": "Pink"
+        },
+        "correct": "c"
+      },
+      {
+        "question": "What were the first ice hockey pucks made out of?",
+        "answers": {
+          "a": "Smashed cans",
+          "b": "Frozen cow dung",
+          "c": "Slab of salami"
+        },
+        "correct": "b"
+      },
+      {
+        "question": "Who invented the word vomit?",
+        "answers": {
+          "a": "Mark Twain",
+          "b": "D.H. Lawrence",
+          "c": "William Shakespeare"
+        },
+        "correct": "c"
+      },
+      {
+        "question": "Where was the fortune cookie invented?",
+        "answers": {
+          "a": "Shanghai",
+          "b": "San Francisco",
+          "c": "Singapore"
+        },
+        "correct": "b"
+      }
+]
